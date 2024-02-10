@@ -22,10 +22,3 @@ require("lazy").setup("plugins")
 
 vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {}) 
 
-local config = require("nvim-treesitter.configs")
-config.setup({
-  ensure_installed = {"lua"},
-  highlight = { enabble = true },
-  indent = { enable = true },
-})
-
