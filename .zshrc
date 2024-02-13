@@ -25,7 +25,7 @@ alias sc="source $HOME/.zshrc"  # reload zsh configuration
 #prompt adam1            # see Zsh Prompt Theme below
 
 # Use vi keybindings even if our EDITOR is set to vi
-bindkey -e
+bindkey -v
 
 setopt histignorealldups sharehistory
 
@@ -52,6 +52,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
 zplug "junegunn/fzf"
+zplug "jeffreytse/zsh-vi-mode"
 #zplug "themes/robbyrussell", from:oh-my-zsh, as:theme   # Theme
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
