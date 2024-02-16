@@ -5,7 +5,7 @@ local mux = wezterm.mux
 wezterm.on('gui-startup', function(window)
   local tab, pane, window = mux.spawn_window(cmd or {})
   local gui_window = window:gui_window();
-  gui_window:maximize()
+  gui_window:perform_action(wezterm.action.ToggleFullScreen, pane)
 end)
 
 config.color_scheme = "Catppuccin Mocha"
