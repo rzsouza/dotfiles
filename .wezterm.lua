@@ -12,5 +12,6 @@ config.color_scheme = "Catppuccin Mocha"
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
+config.native_macos_fullscreen_mode = true
 
 return config
