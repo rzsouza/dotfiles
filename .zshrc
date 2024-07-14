@@ -47,6 +47,7 @@ zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/gradle", from:oh-my-zsh
 zplug "plugins/apt", from:oh-my-zsh
 zplug "plugins/flutter", from:oh-my-zsh
+zplug "plugins/aliases", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
