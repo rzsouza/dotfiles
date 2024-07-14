@@ -40,6 +40,7 @@ compinit
 
 # zplug - manage plugins
 source /usr/share/zplug/init.zsh
+zplug "zplug/zplug", hook-build:'zplug --self-manage'
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/asdf", from:oh-my-zsh
