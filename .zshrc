@@ -69,5 +69,11 @@ zplug load
 
 . ~/.asdf/plugins/java/set-java-home.zsh
 
+# Set local aliases
+MY_LOCAL_CONFIG=~/.my-local-config
+if [[ -f $MY_LOCAL_CONFIG ]]; then
+  source $MY_LOCAL_CONFIG
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
