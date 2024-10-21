@@ -67,8 +67,6 @@ if ! zplug check --verbose; then
 fi
 zplug load 
 
-. ~/.asdf/plugins/java/set-java-home.zsh
-
 # Set local aliases
 MY_LOCAL_CONFIG=~/.my-local-config
 if [[ -f $MY_LOCAL_CONFIG ]]; then
@@ -77,3 +75,11 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
