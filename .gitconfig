@@ -1,0 +1,7 @@
+[user]
+	email = 1624095+rzsouza@users.noreply.github.com
+	name = Rodrigo Ziviani de Souza
+[core]
+	autocrlf = input
+[init]
+	defaultBranch = main
