@@ -85,3 +85,13 @@ export PATH="$HOME/.jbang/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
+export GNOME_KEYRING_CONTROL=$XDG_RUNTIME_DIR/keyring
+
+# Start SSH agent if not running
+if [ ! -S ~/.ssh/ssh-agent.sock ]; then
+    eval "$(ssh-agent -s)" > /dev/null
+    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh-agent.sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh-agent.sock
